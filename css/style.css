@@ -1,0 +1,54 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+
+:root {   /*Duas cores dentro de uma variavel para poder Reaproveita-las*/
+
+    --primary-color: #F5CF06;
+    --secondary-color: #8E4106;
+
+}
+
+body {  /*O body sempre ocupa a largura inteira, deve ser flexivel*/
+
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex; /*Body pai de todos, o display deixa os filhos um do lado do outro,*/
+    flex-direction: column; /*Agora, com o colum, deixamos eles em colunas, um abaixo do outro.*/
+
+}
+
+.container {
+    height: 100%;
+    display: grid;          
+    grid-template-columns:repeat(12, 1fr)    ;   /*Iremos dividir em 12 colunas nosso header, main e footer */ 
+    /*Iremos utilizar a função repeat que ira repetir 12 vezes 1 frame, doze colunas.*/
+
+    width: 90vw; /*A largura do nosso site, no caso ficará flexivel*/
+    
+
+
+}
+
+header {
+
+    background-color: aqua;
+}
+
+main {
+
+    background-color: tomato;
+    flex-grow: 1; /*Propriedade de se esticar. os filhos do body agora são flex.*/
+
+}
+
+footer {
+    background-color: violet;
+
+}
+
+
